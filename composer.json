@@ -1,6 +1,7 @@
 {
     "name": "ichinya/moonshine-login",
     "description": "Form login for MoonShine",
+    "version": "1.0.0",
     "keywords": [
         "Ichinya",
         "laravel",
