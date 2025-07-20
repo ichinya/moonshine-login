@@ -3,9 +3,9 @@
 namespace Ichinya\MoonshineLogin\Controllers;
 
 use App\Http\Controllers\Controller;
-use Ichinya\MoonshineLogin\Requests\RegisterFormRequest;
 use App\Models\User;
 use Ichinya\MoonshineLogin\Pages\RegisterPage;
+use Ichinya\MoonshineLogin\Requests\RegisterFormRequest;
 use Illuminate\Http\RedirectResponse;
 
 final class RegisterController extends Controller

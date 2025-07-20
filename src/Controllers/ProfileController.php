@@ -3,9 +3,9 @@
 namespace Ichinya\MoonshineLogin\Controllers;
 
 use App\Http\Controllers\Controller;
-use Ichinya\MoonshineLogin\Requests\ProfileFormRequest;
 use App\Models\User;
 use Ichinya\MoonshineLogin\Pages\ProfilePage;
+use Ichinya\MoonshineLogin\Requests\ProfileFormRequest;
 use Illuminate\Container\Attributes\CurrentUser;
 use Illuminate\Support\Facades\Hash;
 use Symfony\Component\HttpFoundation\RedirectResponse;

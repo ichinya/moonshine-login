@@ -11,14 +11,11 @@ use MoonShine\UI\Components\Layout\Div;
 use MoonShine\UI\Components\Layout\Flash;
 use MoonShine\UI\Components\Layout\Html;
 use MoonShine\UI\Components\Layout\Layout;
+use Override;
 
 final class FormLayout extends CompactLayout
 {
-    protected function getHomeUrl(): string
-    {
-        return route('home');
-    }
-
+    #[Override]
     public function build(): Layout
     {
         return Layout::make([
@@ -42,5 +39,11 @@ final class FormLayout extends CompactLayout
                 ->withAlpineJs()
                 ->withThemes(),
         ]);
+    }
+
+    #[Override]
+    protected function getHomeUrl(): string
+    {
+        return route('home');
     }
 }

@@ -11,11 +11,13 @@ use MoonShine\UI\Fields\Hidden;
 use MoonShine\UI\Fields\Password;
 use MoonShine\UI\Fields\PasswordRepeat;
 use MoonShine\UI\Fields\Text;
+use Override;
 
 class ResetPasswordPage extends Page
 {
     protected ?string $layout = FormLayout::class;
 
+    #[Override]
     public function getBreadcrumbs(): array
     {
         return [
@@ -23,6 +25,7 @@ class ResetPasswordPage extends Page
         ];
     }
 
+    #[Override]
     public function getTitle(): string
     {
         return $this->title ?: 'ForgotPage';

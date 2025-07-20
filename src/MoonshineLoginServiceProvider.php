@@ -12,9 +12,11 @@ use Ichinya\MoonshineLogin\Pages\ResetPasswordPage;
 use Illuminate\Support\ServiceProvider;
 use MoonShine\Contracts\Core\DependencyInjection\ConfiguratorContract;
 use MoonShine\Contracts\Core\DependencyInjection\CoreContract;
+use Override;
 
 class MoonshineLoginServiceProvider extends ServiceProvider
 {
+    #[Override]
     public function register(): void
     {
         //
@@ -22,10 +24,10 @@ class MoonshineLoginServiceProvider extends ServiceProvider
 
     public function boot(CoreContract $core, ConfiguratorContract $config): void
     {
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
 
-        $this->publishes([__DIR__.'/../config/socialite.php' => config_path('socialite.php')], ['config', 'laravel-login', 'moonshine', 'ichinya-moonshine-login', 'moonshine-login']);
+        $this->publishes([__DIR__ . '/../config/socialite.php' => config_path('socialite.php')], ['config', 'laravel-login', 'moonshine', 'ichinya-moonshine-login', 'moonshine-login']);
 
         $core
             ->resources([

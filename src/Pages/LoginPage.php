@@ -14,11 +14,13 @@ use MoonShine\UI\Components\Link;
 use MoonShine\UI\Fields\Password;
 use MoonShine\UI\Fields\Switcher;
 use MoonShine\UI\Fields\Text;
+use Override;
 
 class LoginPage extends Page
 {
     protected ?string $layout = FormLayout::class;
 
+    #[Override]
     public function getBreadcrumbs(): array
     {
         return [
@@ -26,6 +28,7 @@ class LoginPage extends Page
         ];
     }
 
+    #[Override]
     public function getTitle(): string
     {
         return $this->title ?: 'LoginPage';

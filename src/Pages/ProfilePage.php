@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ichinya\MoonshineLogin\Pages;
 
-use App\MoonShine\Layouts\AppLayout;
+use MoonShine\Laravel\Layouts\AppLayout;
 use MoonShine\Laravel\Pages\Page;
 use MoonShine\UI\Components\FormBuilder;
 use MoonShine\UI\Components\Layout\Box;
@@ -14,11 +14,13 @@ use MoonShine\UI\Fields\Hidden;
 use MoonShine\UI\Fields\Password;
 use MoonShine\UI\Fields\PasswordRepeat;
 use MoonShine\UI\Fields\Text;
+use Override;
 
 class ProfilePage extends Page
 {
     protected ?string $layout = AppLayout::class;
 
+    #[Override]
     public function getBreadcrumbs(): array
     {
         return [
@@ -26,6 +28,7 @@ class ProfilePage extends Page
         ];
     }
 
+    #[Override]
     public function getTitle(): string
     {
         return $this->title ?: 'LoginPage';

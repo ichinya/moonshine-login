@@ -11,11 +11,13 @@ use MoonShine\UI\Components\FormBuilder;
 use MoonShine\UI\Components\Layout\Divider;
 use MoonShine\UI\Components\Layout\Flex;
 use MoonShine\UI\Fields\Text;
+use Override;
 
 class ForgotPage extends Page
 {
     protected ?string $layout = FormLayout::class;
 
+    #[Override]
     public function getBreadcrumbs(): array
     {
         return [
@@ -23,6 +25,7 @@ class ForgotPage extends Page
         ];
     }
 
+    #[Override]
     public function getTitle(): string
     {
         return $this->title ?: 'ForgotPage';

@@ -11,11 +11,13 @@ use MoonShine\UI\Components\FormBuilder;
 use MoonShine\UI\Fields\Password;
 use MoonShine\UI\Fields\PasswordRepeat;
 use MoonShine\UI\Fields\Text;
+use Override;
 
 class RegisterPage extends Page
 {
     protected ?string $layout = FormLayout::class;
 
+    #[Override]
     public function getBreadcrumbs(): array
     {
         return [
@@ -23,6 +25,7 @@ class RegisterPage extends Page
         ];
     }
 
+    #[Override]
     public function getTitle(): string
     {
         return $this->title ?: 'RegisterPage';
